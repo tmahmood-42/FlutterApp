@@ -1,12 +1,32 @@
-/*
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 //First APP GITHUB TESTS
 void main() => runApp(MaterialApp(
-  home: Scaffold()
+  home: Scaffold(
+    appBar: AppBar(
+      title: Text('English App'),
+      centerTitle: true,
+      backgroundColor: Colors.red[600],
+    ),
+    body: Center(
+      child: Text(
+        'Body Text',
+        style : TextStyle(
+          fontSize : 20.0,
+          fontWeight: FontWeight.bold,
+          letterSpacing: 2.0,
+          color : Colors.grey[600],
+          ),
+      ),
+    ),
+    floatingActionButton: FloatingActionButton(
+      onPressed: () {},
+      child: Text('Click'),
+      backgroundColor: Colors.red[600],
+    ),
+  ),
 ));
+
 */
-
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,14 +45,14 @@ class FigmaToCodeApp extends StatelessWidget {
       ),
       home: Scaffold(
         body: ListView(children: [
-          HomeScreen(),
+          Login(),
         ]),
       ),
     );
   }
 }
 
-class HomeScreen extends StatelessWidget {
+class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -45,54 +65,142 @@ class HomeScreen extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
-                left: 133,
-                top: 504,
-                child: SizedBox(
-                  width: 124,
-                  height: 27,
-                  child: Text(
-                    'Get Started',
-                    style: TextStyle(
-                      color: Color(0xFFFFF8F8),
-                      fontSize: 20,
-                      fontFamily: 'Inter',
-                      fontWeight: FontWeight.w400,
-                    ),
+                left: 67,
+                top: 94,
+                child: Container(
+                  width: 232,
+                  height: 200,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 32,
+                        top: 0,
+                        child: Container(
+                          width: 200,
+                          height: 200,
+                          decoration: ShapeDecoration(
+                            color: Color(0xFF1B9AAA),
+                            shape: OvalBorder(),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 64,
+                        top: 37,
+                        child: Container(
+                          width: 135.54,
+                          height: 127,
+                          padding: const EdgeInsets.only(top: 21.17, left: 22.59, right: 22.59),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: 45.18,
+                                height: 42.33,
+                                decoration: ShapeDecoration(
+                                  shape: OvalBorder(
+                                    side: BorderSide(
+                                      width: 0.50,
+                                      strokeAlign: BorderSide.strokeAlignCenter,
+                                      color: Color(0xFFFFFCFC),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                width: 90.36,
+                                height: 63.50,
+                                decoration: ShapeDecoration(
+                                  shape: OvalBorder(
+                                    side: BorderSide(
+                                      width: 0.50,
+                                      strokeAlign: BorderSide.strokeAlignCenter,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 0,
+                        top: 77,
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          clipBehavior: Clip.antiAlias,
+                          decoration: BoxDecoration(),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
               Positioned(
-                left: -55,
-                top: 62,
+                left: 68,
+                top: 474,
                 child: Container(
-                  width: 500,
-                  height: 500,
+                  width: 254,
+                  height: 54,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 94,
+                        top: 14,
+                        child: SizedBox(
+                          width: 66,
+                          height: 27,
+                          child: Text(
+                            'Sign In',
+                            style: TextStyle(
+                              color: Color(0xFFFFF8F8),
+                              fontSize: 20,
+                              fontFamily: 'Inter',
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 32,
+                top: 330,
+                child: Container(
+                  width: 327,
+                  height: 44,
                   child: Stack(
                     children: [
                       Positioned(
                         left: 0,
                         top: 0,
                         child: Container(
-                          width: 500,
-                          height: 500,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/500x500"),
-                              fit: BoxFit.fill,
+                          width: 327,
+                          height: 44,
+                          decoration: ShapeDecoration(
+                            color: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(width: 0.50, color: Color(0xFFD4D7DE)),
+                              borderRadius: BorderRadius.circular(4),
                             ),
                           ),
                         ),
                       ),
                       Positioned(
-                        left: 171,
-                        top: 300,
-                        child: SizedBox(
-                          width: 159,
-                          height: 43,
+                        left: 16,
+                        top: 14,
+                        child: Opacity(
+                          opacity: 0.80,
                           child: Text(
-                            '  The Best Way                              to Learn English',
+                            'Enter Name',
                             style: TextStyle(
-                              color: Color(0xFF323941),
+                              color: Color(0xFF323940),
                               fontSize: 16,
                               fontFamily: 'PT Mono',
                               fontWeight: FontWeight.w400,
@@ -101,6 +209,105 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                     ],
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 32,
+                top: 394,
+                child: Container(
+                  width: 327,
+                  height: 44,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 0,
+                        top: 0,
+                        child: Container(
+                          width: 327,
+                          height: 44,
+                          decoration: ShapeDecoration(
+                            color: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(width: 0.50, color: Color(0xFFD4D7DE)),
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 16,
+                        top: 14,
+                        child: Opacity(
+                          opacity: 0.80,
+                          child: Text(
+                            'Enter Password',
+                            style: TextStyle(
+                              color: Color(0xFF323940),
+                              fontSize: 16,
+                              fontFamily: 'PT Mono',
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 184,
+                top: 572,
+                child: SizedBox(
+                  width: 22,
+                  height: 22,
+                  child: Text(
+                    'or',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontFamily: 'Montserrat',
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 68,
+                top: 614,
+                child: Container(
+                  width: 254,
+                  height: 54,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFF1B9AAA),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    shadows: [
+                      BoxShadow(
+                        color: Color(0x3F000000),
+                        blurRadius: 4,
+                        offset: Offset(0, 4),
+                        spreadRadius: 0,
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 100,
+                top: 630,
+                child: SizedBox(
+                  width: 212,
+                  height: 28,
+                  child: Text(
+                    'Create New Account',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w400,
+                    ),
                   ),
                 ),
               ),
