@@ -1,108 +1,121 @@
-// English Learning App
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primaryColor: Color(0xFFF5F1E3),
-      ),
-      home: MyHomePage(),
+      title: 'English Advantage',
+      home: HomePage(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Menu'),
-        backgroundColor: Color(0xFF1B9AAA),
-      ),
-      body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFF1B9AAA),
-              ),
-              onPressed: () {
-                // Do something
-              },
-              child: Text('Slang'),
+      body: Container(
+        color: Color(0xFFF5F1E3),
+        child: Center(
+          child: FractionallySizedBox(
+            widthFactor: 0.8, // Adjust the width factor as needed
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'English Advantage',
+                  style: TextStyle(
+                    color: Color(0xFF1B9AAA),
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    // Navigate to the next page.
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MainMenu()),
+                    );
+                  },
+                  child: Text(
+                    'Continue',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xFF1B9AAA),
+                  ),
+                ),
+              ],
             ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFF1B9AAA),
-              ),
-              onPressed: () {
-                // Do something
-              },
-              child: Text('Informal English'),
-            ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFF1B9AAA),
-              ),
-              onPressed: () {
-                // Do something
-              },
-              child: Text('Formal English'),
-            ),
-          ],
+          ),
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.arrow_forward),
-            label: 'Next',
-          ),
-        ],
-        onTap: (index) {
-          if (index == 0) {
-            _handleHomeButtonPressed(context); // Pass the context parameter
-          }
-        },
       ),
     );
   }
 }
-//Function to GO Back Home Screen
-void _handleHomeButtonPressed(BuildContext context) {
-  Navigator.push(
-    context,
-    MaterialPageRoute(
-      builder: (context) => Scaffold(
-        body: Center(
-          child: Text(
-            'Home',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
+
+
+class MainMenu extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        color: Color(0xFFF5F1E3),
+        child: Center(
+          child: FractionallySizedBox(
+            widthFactor: 0.8, // Adjust the width factor as needed
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Slang()),
+                    );
+                  },
+                  child: Text('Slang'),
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xFF1B9AAA),
+                  ),
+                ),
+                SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('Informal'),
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xFF1B9AAA),
+                  ),
+                ),
+                SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('Formal'),
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xFF1B9AAA),
+                  ),
+                ),
+              ],
             ),
           ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
-
-
-
-
-
+class Slang extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
 
 /*import 'package:flutter/material.dart';
 //First APP GITHUB TESTS
