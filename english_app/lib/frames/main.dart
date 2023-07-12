@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
                     // Navigate to the next page.
@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
                     style: TextStyle(color: Colors.white),
                   ),
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFF1B9AAA),
+                    backgroundColor: Color(0xFF1B9AAA),
                   ),
                 ),
               ],
