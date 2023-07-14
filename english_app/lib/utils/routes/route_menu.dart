@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'route_name.dart';
-import 'package:english_app/frames/home.dart';
-import 'package:english_app/frames/default_route.dart';
+import 'package:english_app/screens/home.dart';
+import 'package:english_app/screens/default_route.dart';
 
 
 class Routes{

@@ -1,27 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'package:english_app/screens/wrapper.dart';
 //import 'package:firebase_auth/firebase_auth.dart'; // Firebase auth package
 //import 'package:cloud_firestore/cloud_firestore.dart'; //firestroe package
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'English Advantage',
-      home: HomePage(),
+      home: Wrapper(),
     );
   }
 }
-
+/*
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -67,8 +66,8 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-
+*/
+/*
 class MainMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -340,6 +339,7 @@ class SlangPage extends StatelessWidget {
     );
   }
 }
+*/
 
 /*import 'package:flutter/material.dart';
 //First APP GITHUB TESTS
