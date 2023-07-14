@@ -18,11 +18,10 @@ class _AuthenticateState extends State<Authenticate> {
 
   @override
   Widget build(BuildContext context) {
+    // Determines Which Screen to Show based off toggleView()
     if (showSignIn)
-    {
-      return SignIn(toggleView: toggleView);
-    } else {
-      return Register(toggleView: toggleView);
-    }
+    {return SignIn(toggleView: toggleView);} 
+    else 
+    {return Register(toggleView: toggleView);}
   }
 }

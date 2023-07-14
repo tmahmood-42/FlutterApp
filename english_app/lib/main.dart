@@ -2,9 +2,9 @@ import 'package:english_app/services/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
-import 'firebase_options.dart';
+//import 'firebase_options.dart';
 import 'package:english_app/screens/wrapper.dart';
-import 'package:provider/provider.dart'; 
+//import 'package:provider/provider.dart'; 
 import 'models/app_user.dart';
 //import 'package:firebase_auth/firebase_auth.dart'; // Firebase auth package
 //import 'package:cloud_firestore/cloud_firestore.dart'; //firestroe package
