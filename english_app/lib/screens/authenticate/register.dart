@@ -76,10 +76,12 @@ class _RegisterState extends State<Register> {
                     setState(() => loading = true);
                     dynamic result = await _auth.registerWithEmailandPassword(email, password);
                     if (result == null) {
-                      setState((){
-                        error = 'Please Use Valid Credentials';
-                        loading = false;
-                      });
+                      if (mounted) {
+                        setState((){
+                          error = 'Please Use Valid Credentials';
+                          loading = false;
+                        });
+                      }
                     }
                   }
                 },

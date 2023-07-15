@@ -8,6 +8,7 @@ import 'package:english_app/screens/wrapper.dart';
 import 'models/app_user.dart';
 //import 'package:firebase_auth/firebase_auth.dart'; // Firebase auth package
 //import 'package:cloud_firestore/cloud_firestore.dart'; //firestroe package
+import 'package:english_app/screens/entryscreen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -23,11 +24,12 @@ class MyApp extends StatelessWidget {
       initialData: null,
       child: MaterialApp(
         title: 'English Advantage',
-        home: Wrapper(),
+        home: EntryScreen(),
       ),
     );
   }
 }
+
 /*
 class HomePage extends StatelessWidget {
   @override
