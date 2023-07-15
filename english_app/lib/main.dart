@@ -1,25 +1,36 @@
+import 'package:english_app/services/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
-
+import 'package:provider/provider.dart';
+//import 'firebase_options.dart';
+import 'package:english_app/screens/wrapper.dart';
+//import 'package:provider/provider.dart'; 
+import 'models/app_user.dart';
+//import 'package:firebase_auth/firebase_auth.dart'; // Firebase auth package
+//import 'package:cloud_firestore/cloud_firestore.dart'; //firestroe package
+import 'package:english_app/screens/entryscreen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'English Advantage',
-      home: HomePage(),
+    return StreamProvider<AppUser?>.value(
+      value: AuthService().appUser,
+      initialData: null,
+      child: MaterialApp(
+        title: 'English Advantage',
+        home: EntryScreen(),
+      ),
     );
   }
 }
 
+/*
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -65,8 +76,8 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-
+*/
+/*
 class MainMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -338,6 +349,7 @@ class SlangPage extends StatelessWidget {
     );
   }
 }
+*/
 
 /*import 'package:flutter/material.dart';
 //First APP GITHUB TESTS

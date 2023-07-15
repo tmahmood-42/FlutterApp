@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'route_name.dart';
-import 'package:english_app/frames/home.dart';
-import 'package:english_app/frames/default_route.dart';
+import 'package:english_app/screens/entryscreen.dart';
+import 'package:english_app/screens/default_route.dart';
 
 
 class Routes{
@@ -9,7 +9,7 @@ class Routes{
     switch(settings.name){
       case RoutesName.home:
         return MaterialPageRoute(
-            builder: (BuildContext context) =>  Home());
+            builder: (BuildContext context) =>  EntryScreen());
       default:
         return MaterialPageRoute(
             builder: (BuildContext context) => DefaultRoute());
