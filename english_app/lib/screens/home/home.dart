@@ -6,11 +6,16 @@ import 'package:english_app/screens/Home/user_list.dart';
 import 'package:english_app/models/user_data.dart';
 import 'package:english_app/screens/Home/settings_form.dart';
 import 'package:english_app/screens/entryscreen.dart';
+import 'package:english_app/screens/menu.dart';
+import 'package:english_app/Homework/formal_questions.dart';
 
 class Home extends StatelessWidget {
   //const Home({super.key});
 
   final AuthService _auth = AuthService();
+
+  // FOr Fetching Documents
+  FormalQuestions formalQuestions = FormalQuestions();
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +34,7 @@ class Home extends StatelessWidget {
         child: Scaffold(
         backgroundColor: Colors.brown[50],
         appBar: AppBar(
-          title: Text('English Advantage'),
+          title: Text('User'),
           backgroundColor: Colors.brown[400],
           elevation: 0.0,
           actions: <Widget>[
@@ -51,6 +56,15 @@ class Home extends StatelessWidget {
           ],
         ),
         body: UserList(),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.aod_rounded),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Menu()),
+            );
+          },
+        ),
       ),
     );
   }

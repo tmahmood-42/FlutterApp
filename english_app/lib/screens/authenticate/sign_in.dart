@@ -2,7 +2,8 @@ import 'package:english_app/services/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:english_app/utils/constants/inputs.dart';
 import 'package:english_app/utils/widgets/loadingscreen.dart';
-
+import 'package:english_app/screens/entryscreen.dart';
+import 'package:english_app/Homework/formal_questions.dart';
 
 class SignIn extends StatefulWidget {
 
@@ -20,6 +21,7 @@ class _SignInState extends State<SignIn> {
   String password = '';
   String error = '';
 
+  final FormalQuestions formalQuestions = FormalQuestions();
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
   // Determines when to Display Loading Screen
@@ -28,9 +30,9 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return loading ? Loading() : Scaffold(
-      backgroundColor : Colors.brown[100],
+      backgroundColor: Color(0xFFE0E1DD),
       appBar: AppBar(
-        backgroundColor : Colors.brown[400],
+       backgroundColor: Color(0xFF415A77),
         elevation: 0.0,
         title: Text('Sign In'),
         actions: <Widget>[
@@ -99,7 +101,18 @@ class _SignInState extends State<SignIn> {
             ]
           ),
         ),
-      )
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.home),
+        backgroundColor: Color(0xFF415A77),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => EntryScreen()),
+          );
+        },
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

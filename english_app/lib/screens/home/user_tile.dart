@@ -18,7 +18,7 @@ class UserTile extends StatelessWidget {
             backgroundColor: Colors.brown[user.strength],
           ),
           title: Text(user.name),
-          subtitle: Text('Strength: ${user.strength} '),
+          subtitle: Text('Algorithm Score: ${user.strength} '),
         ),
       ),
     );

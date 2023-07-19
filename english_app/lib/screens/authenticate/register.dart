@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:english_app/services/auth.dart';
 import 'package:english_app/utils/constants/inputs.dart';
 import 'package:english_app/utils/widgets/loadingscreen.dart';
+import 'package:english_app/screens/entryscreen.dart';
 
 
 class Register extends StatefulWidget {
@@ -25,9 +26,9 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return loading ? Loading() : Scaffold(
-      backgroundColor : Colors.brown[100],
+      backgroundColor: Color(0xFFE0E1DD),
       appBar: AppBar(
-        backgroundColor : Colors.brown[400],
+        backgroundColor: Color(0xFF415A77),
         elevation: 0.0,
         title: Text('Register for English Advantage'),
         actions: <Widget>[
@@ -98,7 +99,18 @@ class _RegisterState extends State<Register> {
             ]
           ),
         ),
-      )
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.home),
+        backgroundColor: Color(0xFF415A77),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => EntryScreen()),
+          );
+        },
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 } 
