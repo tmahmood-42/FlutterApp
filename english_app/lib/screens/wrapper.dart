@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:english_app/models/app_user.dart';
 import 'package:english_app/Homework/formal_questions.dart';
 import 'package:english_app/screens/menu.dart';
+import 'package:english_app/screens/altTest.dart';
 
 class Wrapper extends StatelessWidget {
   Wrapper({super.key});
@@ -18,7 +19,7 @@ class Wrapper extends StatelessWidget {
     if (appUser == null) {
       return Authenticate();
     } else {
-      return Menu();
+      return MainSigninOrRegister();
     }
   }
 }

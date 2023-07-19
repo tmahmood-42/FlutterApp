@@ -19,6 +19,8 @@ class _RegisterState extends State<Register> {
   String password = '';
   String error = '';
   bool loading = false;
+  List<String> dropDownGenderSelect = ['Male', 'Female', 'Decline to State', 'Select Gender'];
+  String selectedOption = 'Select Gender';
 
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
@@ -66,6 +68,23 @@ class _RegisterState extends State<Register> {
                 onChanged: (val) {
                   setState(() => password = val);
                 }
+              ),
+              DropdownButton<String>(
+                value: selectedOption,
+                onChanged: (String? newValue) {
+                  // When an option is selected, update the 'selectedOption' variable
+                  if (newValue != null) {
+                    selectedOption = newValue;
+                    // Call setState() to rebuild the UI with the new selected option
+                    setState(() {});
+                  }
+                },
+                items: dropDownGenderSelect.map<DropdownMenuItem<String>>((String value) {
+                  return DropdownMenuItem<String>(
+                    value: value,
+                    child: Text(value),
+                  );
+                }).toList(),
               ),
               SizedBox(height: 20.0,),
               ElevatedButton(
