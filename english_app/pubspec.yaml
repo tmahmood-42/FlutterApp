@@ -40,6 +40,7 @@ dependencies:
   cloud_firestore: ^4.8.2
   provider: ^6.0.5
   flutter_spinkit: ^5.2.0
+  chat_gpt_sdk: ^2.2.3
 
 dev_dependencies:
   flutter_test:
@@ -78,10 +79,13 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+   - family: Angkor
+     fonts:
+       - asset: lib/assets/fonts/Angkor-Regular.ttf
+   - family: Anon
+     fonts:
+       - asset: lib/assets/fonts/AnonymousPro-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
